@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data-sanitizer"
+version = "1.0.0"
+description = "Lightweight data sanitization for AI agent pipelines — strip API keys, tokens, local paths, PII before LLM processing"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+keywords = ["pii", "redaction", "sanitization", "privacy", "llm", "ai-agent", "data-cleaning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Pre-processors",
+]
+
+[project.urls]
+Homepage = "https://github.com/1624318455/data-sanitizer"
+Repository = "https://github.com/1624318455/data-sanitizer"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[project.scripts]
+data-sanitizer = "data_sanitizer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
